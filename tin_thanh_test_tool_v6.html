@@ -685,7 +685,7 @@
     <div class="test-page" id="testPage">
       <div class="brand">TÍN THÀNH • ORITEK</div>
       <h1 class="title">BÀI TEST ĐẦU VÀO — NV KHO</h1>
-      <div class="subtitle">Vòng sàng lọc — Tín Thành 2026 (v5)</div>
+      <div class="subtitle">Vòng sàng lọc — Tín Thành 2026</div>
 
       <!-- INFO FORM -->
       <div class="card">
@@ -711,20 +711,19 @@
 
       <!-- INSTRUCTION -->
       <div class="instruction">
-        <p><b>HƯỚNG DẪN:</b> Bài kiểm tra <b>đầu vào — sàng lọc</b> cho ứng viên NV Kho. Bài <b>100 điểm — 60 phút</b>.
+        <p><b>HƯỚNG DẪN:</b> Bài kiểm tra <b>đầu vào — sàng lọc</b> cho ứng viên NV Kho. Bài <b>105 điểm — 60 phút</b>.
           <span class="red">ĐỌC KỸ TỪNG ĐÁP ÁN</span> — các đáp án có thể <span class="red">rất giống nhau</span>, chỉ
-          khác 1-2 chữ then chốt. Đọc lướt sẽ chọn nhầm.
-        </p>
-        <p><b>CẤU TRÚC:</b> Phần A (15đ) — Kiến thức linh kiện | Phần B (19đ) — Tư duy kho | Phần C (15đ) — Toán & Excel
-          | Phần D (15đ) — Đạo đức nghề | Phần E (26đ) — Xử lý tình huống | Phần F (10đ) — Tự đánh giá.</p>
-        <p><b class="red">ĐIỂM SÀN:</b> Tổng <b>≥ 65/100</b> và Phần D <b>≥ 10/15</b> mới qua vòng đầu. Phần D dưới sàn
+          khác 1-2 chữ then chốt. Đọc lướt sẽ chọn nhầm.</p>
+        <p><b>CẤU TRÚC:</b> Phần A (15đ) — Kiến thức linh kiện | Phần B (22đ) — Tư duy kho | Phần C (15đ) — Toán & Excel
+          | Phần D (15đ) — Đạo đức nghề | Phần E (28đ) — Xử lý tình huống | Phần F (10đ) — Tự đánh giá.</p>
+        <p><b class="red">ĐIỂM SÀN:</b> Tổng <b>≥ 68/105</b> và Phần D <b>≥ 10/15</b> mới qua vòng đầu. Phần D dưới sàn
           = <span class="red">loại ngay</span> dù tổng điểm cao.</p>
       </div>
 
       <!-- TIMER BAR -->
       <div class="timer-bar">
         <div class="timer" id="timer">60:00</div>
-        <div class="progress" id="progress">Đã trả lời: 0 / 28</div>
+        <div class="progress" id="progress">Đã trả lời: 0 / 29</div>
       </div>
 
       <!-- QUESTIONS RENDERED HERE -->
@@ -782,7 +781,7 @@
   <div class="modal-overlay" id="warningModal">
     <div class="modal">
       <h2 id="modalTitle">Xác nhận nộp bài</h2>
-      <p id="modalText">Bạn đã trả lời <span id="modalAnswered"></span> / 28 câu. Bạn có chắc muốn nộp bài không?</p>
+      <p id="modalText">Bạn đã trả lời <span id="modalAnswered"></span> / 29 câu. Bạn có chắc muốn nộp bài không?</p>
       <p style="color: var(--red); font-weight: 600;">Sau khi nộp, không thể chỉnh sửa.</p>
       <div class="modal-actions">
         <button class="btn btn-secondary" onclick="closeModal()">Quay lại</button>
@@ -796,7 +795,7 @@
     // QUESTION DATA - chứa toàn bộ đề + đáp án + giải thích
     // ============================================================
     const QUESTIONS = [
-      // === PHẦN A ===
+      // === PHẦN A — KIẾN THỨC LINH KIỆN (15đ - 5 câu × 3đ) ===
       {
         id: "A1", part: "A", points: 3, correct: "A", text: "So sánh chất lượng hiển thị giữa Màn OLED chính hãng và Màn INCELL chính hãng. Câu ĐÚNG NHẤT:",
         options: {
@@ -809,25 +808,25 @@
       },
 
       {
-        id: "A2", part: "A", points: 3, correct: "C", text: "Khi nhập pin REXON từ NCC vào kho, dấu hiệu phân biệt pin chính hãng REXON là gì?",
+        id: "A2", part: "A", points: 3, correct: "C", text: "Khách hỏi: \"Pin REXON có chữ R nổi trên cell pin có phải pin chính hãng REXON không?\". Câu trả lời ĐÚNG NHẤT:",
         options: {
-          A: "Pin chính hãng REXON đều có logo REXON (chữ R) nổi trên cell pin, pin không có logo là hàng nhái cùng tên",
-          B: "Đa số pin chính hãng REXON có logo REXON, một số ít hàng nhái cũng dập chữ R giả nên cần kiểm tra thêm",
-          C: "Pin REXON có 2 đợt sản xuất: có logo REXON (chữ R) và không có logo — cả 2 đều chính hãng, chỉ khác đợt sản xuất",
-          D: "Logo REXON chỉ là dấu hiệu phụ — phải mở vỏ pin xem mạch BMS bên trong mới xác định được chính hãng"
+          A: "Đúng — pin REXON chính hãng có chữ R nổi, pin không có chữ R là hàng nhái cùng tên",
+          B: "Đúng phần lớn — REXON chính hãng đa số có chữ R, một số hàng nhái cũng dập chữ R giả",
+          C: "Pin REXON có 2 loại: có logo REXON (chữ R) và không logo — cả 2 đều chính hãng, chỉ khác đợt sản xuất",
+          D: "Có chữ R chỉ là dấu hiệu phụ — phải mở vỏ pin xem mạch BMS bên trong mới xác định được"
         },
-        explain: "REXON có 2 đợt sản xuất: có logo và không logo — cả 2 đều chính hãng. Tham chiếu chat nội bộ 24/02/2026 \"cell ko logo rexon\"."
+        explain: "REXON có 2 đợt sản xuất: có logo và không logo — cả 2 đều chính hãng. Bẫy A và B đều nói \"đúng phần lớn\" nhưng kết luận sai (có R = thật / không R = nhái). Bẫy D \"mở vỏ pin xem mạch BMS\" VƯỢT QUÁ vai trò NV kho."
       },
 
       {
-        id: "A3", part: "A", points: 3, correct: "A", text: "Trên kệ có 2 mã: \"Màn 11 ép kính (I)\" và \"Màn 11 ép kính - REXON\". Sale báo: \"Khách order Màn 11 ép kính, mã nào cũng được\". Bạn xử lý:",
+        id: "A3", part: "A", points: 3, correct: "A", text: "Khách order \"Màn iPhone 11 ép kính\". Trên kệ có 2 mã: \"Màn 11 ép kính (I)\" và \"Màn 11 ép kính - REXON\". Hai mã này:",
         options: {
-          A: "Là 2 mã khác nhau (I là màn Tín Thành tự ép, REXON là màn ép sẵn từ NCC) — CÙNG GIÁ nhưng khác nguồn. KHÔNG được trộn lẫn / đổi qua lại khi xuất kho. Hỏi sale chốt 1 mã cụ thể trước khi soạn",
-          B: "Cùng giá thì lấy mã nào cũng được — chọn mã có tồn nhiều hơn để cân bằng kho",
-          C: "Theo FIFO: lấy mã nào nhập kho trước thì xuất trước, không phân biệt nguồn",
-          D: "Là cùng 1 loại — (I) là cách viết tắt nội bộ của Tín Thành cho mã REXON, soạn 1 trong 2 đều được"
+          A: "Là 2 mã ép kính khác nhau — (I) là màn Tín Thành tự ép, REXON là màn ép sẵn từ NCC. KHÁC giá, kho KHÔNG được tự đổi qua lại",
+          B: "Là 2 mã ép kính khác nhau — (I) là Incell, REXON là OEM. Khác chất lượng, không được đổi qua lại",
+          C: "Là 2 mã ép kính khác nhau — (I) là Imported (nhập khẩu), REXON là OEM trong nước. Có thể đổi qua lại nếu hết hàng",
+          D: "Là cùng 1 loại màn ép kính — (I) là cách viết tắt nội bộ Tín Thành, REXON là tên đầy đủ của NCC"
         },
-        explain: "(I) = Tín Thành tự ép, REXON = NCC ép sẵn — CÙNG GIÁ nhưng KHÁC NGUỒN. Kho KHÔNG được trộn lẫn / đổi qua lại để giữ đúng nguồn gốc hàng. Phải hỏi sale chốt mã cụ thể."
+        explain: "(I) là màn Tín Thành tự ép (nội bộ), REXON là màn ép sẵn từ NCC. KHÁC giá, KHÔNG được đổi qua lại. Bẫy B/C/D đều bịa giải thích."
       },
 
       {
@@ -835,10 +834,10 @@
         options: {
           A: "Tem QR còn nguyên = vẫn nhận bảo hành theo nguyên tắc QR 12/04/2026. Ghi nhận dấu hiệu lạ vào biên bản nhưng vẫn bảo hành",
           B: "Có dấu hiệu can thiệp dù tem còn — KHO từ chối luôn tại quầy: \"khách đã ép kính ngoài, mất quyền bảo hành\". Đỡ tốn thời gian BH/QL",
-          C: "Có dấu hiệu can thiệp dù tem còn — phản hồi lại sale chuyển case + chụp ảnh dấu hiệu can thiệp + đưa BH/QL xem để quyết định cuối cùng. Kho KHÔNG đơn phương từ chối",
+          C: "Có dấu hiệu can thiệp dù tem còn — ghi rõ vào biên bản + chụp ảnh, đưa BH/QL xem để quyết định cuối cùng. Kho KHÔNG đơn phương từ chối",
           D: "Có dấu hiệu can thiệp dù tem còn — nhận bảo hành nhưng đề nghị khách trả phí dịch vụ kiểm tra 100k, sau đó BH quyết"
         },
-        explain: "Có dấu hiệu can thiệp → kho phản hồi sale + chụp ảnh dấu hiệu + báo BH/QL quyết, không tự ý từ chối. Kho không có quyền đơn phương từ chối."
+        explain: "Có dấu hiệu can thiệp → ghi vào biên bản + chụp ảnh + đưa BH/QL quyết. Kho KHÔNG đơn phương từ chối."
       },
 
       {
@@ -849,10 +848,10 @@
           C: "GX OLED và INCELL đều dùng hộp đen — phân biệt bằng tem dán bên ngoài (OLED có chữ O, INCELL có chữ I)",
           D: "GX OLED và INCELL có cùng độ dày — phân biệt bằng cách bật màn lên test: OLED có màu đen sâu, INCELL màu xám"
         },
-        explain: "Theo thực tế Tín Thành: GX OLED hộp đen, INCELL hộp cam. INCELL là màn phản quang nên dày hơn OLED, hiển thị xấu hơn."
+        explain: "GX OLED hộp đen, INCELL hộp cam. INCELL là màn phản quang nên dày hơn OLED, hiển thị xấu hơn."
       },
 
-      // === PHẦN B ===
+      // === PHẦN B — TƯ DUY KHO (22đ - 8 câu) ===
       {
         id: "B1", part: "B", points: 3, correct: "C", text: "Nguyên tắc xuất kho mặc định tại Tín Thành. Câu ĐÚNG NHẤT:",
         options: {
@@ -872,29 +871,29 @@
           C: "Từ chối lịch sự: \"Anh ơi không có phiếu HT Soft em không xuất được, anh lên đơn em xử lý liền\". Nếu sale ép, chụp lại tin nhắn + báo QL kho",
           D: "Từ chối + báo QL kho qua điện thoại để QL quyết định — em chỉ thực thi lệnh từ QL, không tự quyết"
         },
-        explain: "Bẫy A: \"đồng ý + 2 lớp bằng chứng\" nghe \"khôn\" nhưng VẪN VI PHẠM cốt lõi."
+        explain: "Bẫy A nguy hiểm nhất: \"đồng ý + 2 lớp bằng chứng\" nghe \"khôn\" nhưng VẪN VI PHẠM cốt lõi."
       },
 
       {
         id: "B3", part: "B", points: 3, correct: "B", text: "Nhận hàng nhập về, đếm thấy THIẾU 1 cái so với bill NCC. Bạn làm gì ĐẦU TIÊN?",
         options: {
-          A: "Đếm lại lần 2 cho chắc → nếu vẫn thiếu thì báo group tag bộ phận liên quan → không mang hàng ra khỏi phòng khui",
-          B: "Báo group tag bộ phận liên quan ngay lập tức + không mang hàng ra khỏi phòng khui → sau đó nhờ đồng nghiệp đếm chéo có người làm chứng",
-          C: "Hỏi đồng nghiệp/sale có ai vừa cầm 1 cái không → nếu không ai cầm thì báo group tag bộ phận liên quan",
-          D: "Báo trực tiếp QL kho qua điện thoại + giải trình → không cần báo group, tránh ồn ào khi chưa rõ nguyên nhân"
+          A: "Đếm lại lần 2 cho chắc → nếu vẫn thiếu thì báo group + chụp ảnh hiện trạng → không mang hàng ra khỏi phòng khui",
+          B: "Báo group ngay + chụp ảnh hiện trạng + không mang hàng ra khỏi phòng khui → sau đó nhờ đồng nghiệp đếm chéo có người làm chứng",
+          C: "Hỏi đồng nghiệp/sale có ai vừa cầm 1 cái không → nếu không ai cầm thì báo group + chụp ảnh",
+          D: "Báo trực tiếp QL kho qua điện thoại + chụp ảnh hiện trạng → không cần báo group, tránh ồn ào khi chưa rõ nguyên nhân"
         },
-        explain: "Phải báo NGAY trên group (tag bộ phận liên quan) để có người làm chứng. Đếm lại sau đó với người khác càng tốt."
+        explain: "Phải báo NGAY có hiện trạng để có người làm chứng. Đếm lại sau đó với người khác càng tốt."
       },
 
       {
         id: "B4", part: "B", points: 3, correct: ["A", "B"], multi: true, text: "Đầu giờ sáng, sổ kho ghi \"Khung ron iPhone XS loại đẹp: 5 cái\". Đếm thực tế: 11 cái. KHÔNG có phiếu nhập trong 24h gần đây. Chọn TẤT CẢ đáp án đúng:",
         options: {
-          A: "Báo lên group tag QL kho ngay lập tức + giải trình hiện trạng theo nguyên tắc \"KHÔNG GIẤU LỖI\"",
-          B: "Đối chiếu phiếu chuyển kho / phiếu nhập trong tháng — có thể có phiếu chưa hạch toán, sau đó báo QL nếu vẫn lệch",
-          C: "Báo QL kho cuối buổi sáng — sau khi đã đối chiếu tất cả phiếu để có thông tin đầy đủ trình QL",
-          D: "Sửa sổ kho thành 11 cho khớp thực tế + báo QL vào buổi chiều"
+          A: "Chụp ảnh hiện trạng + báo QL kho ngay trong 30 phút theo nguyên tắc \"KHÔNG GIẤU LỖI\"",
+          B: "Chụp ảnh hiện trạng + đối chiếu phiếu chuyển kho / phiếu nhập trong tháng — có thể có phiếu chưa hạch toán",
+          C: "Chụp ảnh hiện trạng + báo QL kho cuối buổi sáng — sau khi đã đối chiếu tất cả phiếu để có thông tin đầy đủ trình QL",
+          D: "Chụp ảnh hiện trạng + sửa sổ kho thành 11 cho khớp thực tế + báo QL vào buổi chiều"
         },
-        explain: "ĐÚNG 2 đáp án A và B. Bẫy C: \"cuối buổi sáng\" vi phạm nguyên tắc báo NGAY LẬP TỨC. Bẫy D: SỬA SỔ = GIAN LẬN."
+        explain: "ĐÚNG 2 đáp án A và B. Bẫy C: \"cuối buổi sáng\" vi phạm \"30 phút\". Bẫy D: SỬA SỔ = GIAN LẬN."
       },
 
       {
@@ -920,17 +919,28 @@
       },
 
       {
-        id: "B7", part: "B", points: 2, correct: "B", text: "Thứ tự ĐÚNG khi xuất hàng cho khách tại Tín Thành:",
+        id: "B7", part: "B", points: 3, correct: "B", text: "Sale chạy xuống nói: \"Kho ơi, khách 24H vừa đặt 10 cục Pin REXON 7 Plus — yêu cầu xuất bill VAT. Mà mã pin REXON 7 Plus trong hệ thống KHÔNG có VAT. Em xử lý sao bây giờ\". NV kho cần phản hồi:",
         options: {
-          A: "Sale chat đơn → kho soạn hàng → mang ra khu vực đóng gói → làm bill HT Soft → dán tem bảo hành",
-          B: "Sale chat đơn → kho nhận đơn → soạn hàng theo đơn → làm bill HT Soft → thao tác dán tem bảo hành → mang ra khu vực đóng gói",
-          C: "Sale chat đơn → kho làm bill HT Soft trước → soạn hàng theo bill → dán tem → mang ra khu vực đóng gói",
-          D: "Kho soạn hàng theo yêu cầu sale chat → mang ra khu vực đóng gói → sale lên đơn HT Soft → kho dán tem sau"
+          A: "\"Anh đề nghị khách đổi sang mã Pin BEST/Pisen có VAT cùng giá thay REXON, xuất 1 bill VAT — gọn gàng, đỡ phức tạp kế toán\"",
+          B: "\"Anh báo lên QL/BH duyệt — tách 2 bill: bill mã không VAT (Pin REXON thực giao) + bill VAT mã thay thế cùng giá trị tiền thuế. Em chỉ xuất theo phiếu duyệt, không tự quyết\"",
+          C: "\"Anh báo lên QL/BH duyệt — tách 2 bill: bill mã không VAT + bill VAT mã có VAT khác. Bên kho sẽ GIAO mã có VAT thay vì REXON để bill khớp với hàng giao\"",
+          D: "\"Anh cứ ra bill VAT cho 10 cục Pin REXON, em xuất theo bill — kế toán điều chỉnh thuế ở phía sau cho khớp\""
         },
-        explain: "Quy trình XUẤT đúng tại Tín Thành: sale chat đơn → kho nhận đơn → soạn hàng → làm bill → dán tem → mang ra khu vực đóng gói. Bẫy A: dán tem CUỐI cùng (sai - phải dán trước khi đóng gói). Bẫy C: làm bill TRƯỚC khi soạn (không đúng quy trình thực tế). Bẫy D: kho soạn trước khi sale lên đơn = vi phạm \"không phiếu không xuất\"."
+        explain: "Kho không có thẩm quyền tự quyết, phải đẩy lên QL/BH. Giao đúng hàng khách đặt (Pin REXON), bill VAT là mã thay thế."
       },
 
-      // === PHẦN C ===
+      {
+        id: "B8", part: "B", points: 2, correct: "B", text: "Thứ tự ĐÚNG khi xuất hàng cho khách lẻ đến quầy tại Tín Thành:",
+        options: {
+          A: "Sale lên đơn HT Soft → kho soạn hàng theo phiếu → kho test/kiểm hàng → đóng gói → giao khách → thu tiền",
+          B: "Sale lên đơn HT Soft → kho soạn hàng theo phiếu → kho test/kiểm hàng + dán tem bảo hành QR → ký xác nhận xuất kho → giao sale chuyển khách",
+          C: "Kho soạn hàng theo yêu cầu sale → sale lên đơn HT Soft sau khi khách đồng ý → kho test/kiểm hàng → giao khách",
+          D: "Sale lên đơn HT Soft → kho test/kiểm hàng trước → soạn hàng theo phiếu → dán tem QR → giao sale"
+        },
+        explain: "Quy trình đúng: có phiếu → soạn → test/kiểm + dán tem QR → ký xác nhận → giao sale."
+      },
+
+      // === PHẦN C — TOÁN & EXCEL (15đ) ===
       {
         id: "C1", part: "C", points: 3, correct: "A", text: "Mã IP-2895 — Cell pin iPhone 12 Pro Max — REXON. Đầu kỳ tồn 8. Trong tháng:",
         extra: "<ul><li>• Nhập 50 cái (ngày 5/4)</li><li>• Xuất bán 22 cái (ngày 8/4)</li><li>• Xuất hàng lỗi 3 cái (ngày 12/4)</li><li>• Nhập bù 3 cái từ NCC (ngày 15/4)</li><li>• Xuất chuyển kho khác 10 cái (ngày 20/4)</li></ul><b>Tồn cuối kỳ là bao nhiêu?</b>",
@@ -961,10 +971,10 @@
         options: {
           A: "Sửa tồn HT Soft thành 24 cho khớp thực tế — đã đếm 2 lần chính xác, không có lý do nào khác",
           B: "Truy thêm phiếu xuất từ 30 ngày trước trở lại — có thể có phiếu xuất chưa hạch toán xa hơn 24h",
-          C: "Báo QL kho ngay + giải trình hiện trạng + giữ nguyên số HT Soft → đợi QL quyết định cách điều chỉnh",
+          C: "Báo QL kho ngay + chụp ảnh hiện trạng + giữ nguyên số HT Soft → đợi QL quyết định cách điều chỉnh",
           D: "Xuất tên mình treo công nợ 2 cái thiếu → cuối tháng sau tìm thấy thì bù lại"
         },
-        explain: "Báo QL kho ngay + giải trình, để QL quyết cách điều chỉnh. Bẫy A: sửa HT Soft = GIAN LẬN số liệu kế toán."
+        explain: "Báo QL kho ngay, để QL quyết cách điều chỉnh. Bẫy A: sửa HT Soft = GIAN LẬN số liệu kế toán."
       },
 
       {
@@ -978,16 +988,16 @@
         explain: "Ctrl+F là cách nhanh và đơn giản nhất. Ctrl+H là Replace (nguy hiểm)."
       },
 
-      // === PHẦN D ===
+      // === PHẦN D — ĐẠO ĐỨC (15đ) ===
       {
         id: "D1", part: "D", points: 3, correct: "A", text: "Trong ca làm, bạn vô tình làm rớt 1 màn iPhone 14 Pro Max OLED chính hãng (giá 1.8 triệu), góc màn bị nứt nhẹ nhưng vẫn lên hình bình thường. Không ai chứng kiến. Bạn sẽ:",
         options: {
-          A: "Báo lên group tag QL kho ngay lập tức + giải trình sự cố + chấp nhận quy trách theo quy chế công ty",
-          B: "Báo QL kho cuối buổi + giải trình — tránh làm phiền QL chuyện nhỏ giữa ca làm bận",
-          C: "Báo QL kho cuối ngày trong buổi tổng kết + giải trình — gộp vào báo cáo các vụ NL khác cho gọn",
-          D: "Báo QL kho ngay nhưng đề nghị giữ kín với khách — vẫn bán màn nứt giá đúng, nứt nhẹ không ảnh hưởng dùng"
+          A: "Báo QL kho ngay trong 30 phút + chụp ảnh hiện trạng + chấp nhận quy trách theo quy chế công ty",
+          B: "Báo QL kho cuối buổi + chụp ảnh hiện trạng — tránh làm phiền QL chuyện nhỏ giữa ca làm bận",
+          C: "Báo QL kho cuối ngày trong buổi tổng kết + chụp ảnh — gộp vào báo cáo các vụ NL khác cho gọn",
+          D: "Báo QL kho ngay trong 30 phút nhưng đề nghị giữ kín với khách — vẫn bán màn nứt giá đúng, nứt nhẹ không ảnh hưởng dùng"
         },
-        explain: "Báo NGAY LẬP TỨC + minh bạch với khách. Bẫy D: báo ngay nhưng giữ kín = lừa khách. Bẫy B,C: trễ = vi phạm nguyên tắc \"KHÔNG GIẤU LỖI\"."
+        explain: "Báo NGAY trong 30 phút + minh bạch với khách. Bẫy D: 30 phút nhưng giữ kín = lừa khách."
       },
 
       {
@@ -1034,23 +1044,26 @@
         explain: "NV kho TUYỆT ĐỐI không nhận tiền cá nhân từ khách = sa thải ngay nếu vi phạm."
       },
 
-      // === D6 - text answer
+      // === D6 - text answer (phỏng vấn) ===
       {
         id: "D6", part: "D", type: "text", points: 0, text: "Trong 6 tháng đầu làm việc tại Tín Thành, mục tiêu phát triển của bạn là gì? Hãy mô tả CỤ THỂ (không nói chung chung).",
         note: "Câu phỏng vấn — không tính điểm trắc nghiệm. QL chấm dựa vào: có mục tiêu cụ thể hay không / có thể đo lường được không / có phù hợp vị trí kho không."
       },
 
-      // === PHẦN E - text answer
-      { id: "E1", part: "E", type: "text", points: 9, text: "Khách Đồng Tháp nhận đơn \"Màn iPhone 15 Plus ép kính\" qua nhà xe lúc 8h. 8h30 khách nhắn cho sale báo \"màn lỗi cảm — không gõ được\", yêu cầu giải quyết gấp vì khách đang chờ làm hàng cho khách của họ. Sale chuyển case về kho, áp lực: nếu chậm khách hủy + đăng review xấu. Mô tả 5-6 bước xử lý của bạn — bao gồm cả việc truy trách nhiệm." },
+      // === PHẦN E — TÌNH HUỐNG (28đ) ===
+      {
+        id: "E1", part: "E", type: "text", points: 9, text: "Tình Huống: Xử Lý Khiếu Nại Gấp – Màn Hình Lỗi Cảm Ứng",
+        extra: "<ul><li><b>Bối cảnh:</b></li><li>• 8h00: Gửi đơn màn iPhone 15 Plus ép kính cho khách ở Đồng Tháp qua nhà xe.</li><li>• 10h30: Khách báo lỗi cảm ứng, không gõ được. Khách đang rất gấp để trả máy cho khách lẻ, dọa hủy đơn và đánh giá xấu nếu xử lý chậm.</li></ul><b>Mô tả 5-6 bước xử lý của bạn — bao gồm cả việc truy trách nhiệm.</b>"
+      },
 
       { id: "E2", part: "E", type: "text", points: 9, text: "Cuối tháng kiểm kê 100% kho. Bạn đếm 1 dòng \"Mặt kính lưng iPhone 12 Green\" — sổ kho ghi 1 cái, đếm thực tế: KHÔNG TÌM THẤY. Đã tìm kỹ trong kho 1, phòng khui hàng, tủ trên quầy, hộc giấy. Đồng nghiệp đề nghị: \"Cứ ghi giảm 1 đi, hôm khác tìm thấy thì bù lại\". Bạn xử lý thế nào? Mô tả các bước." },
 
       {
-        id: "E3", part: "E", type: "text", points: 8, text: "Đầu giờ sáng, bạn nhận được 3 việc cùng lúc:",
+        id: "E3", part: "E", type: "text", points: 10, text: "Đầu giờ sáng, bạn nhận được 3 việc cùng lúc:",
         extra: "<ul><li>(1) Khách VIP 1 (anh Thành - LHP) cần lấy gấp 5 bill, đang đợi ngoài quầy.</li><li>(2) NCC giao 1 lô hàng iPad mới về (200 cái), tài xế đang đợi xác nhận để rời đi.</li><li>(3) BH cần kho xác nhận 3 màn lỗi để đổi pin REXON cho khách 24H đang đợi.</li></ul><b>Trong kho chỉ có 1 mình bạn (đồng nghiệp đang ăn sáng). Bạn xử lý theo thứ tự nào? Vì sao? Có cần báo ai không?</b>"
       },
 
-      // === PHẦN F - text answer
+      // === PHẦN F — TỰ ĐÁNH GIÁ (10đ) ===
       { id: "F1", part: "F", type: "text", points: 4, text: "Kinh nghiệm liên quan đến công việc kho/linh kiện điện thoại (mô tả ngắn, có thể không có)." },
 
       { id: "F2", part: "F", type: "text", points: 6, text: "3 điểm mạnh + 1 điểm yếu của bạn liên quan đến công việc này. Trung thực — có điểm yếu không phải tệ, nhưng giấu là tệ." },
@@ -1069,10 +1082,10 @@
       const container = document.getElementById('questionsContainer');
       const partTitles = {
         A: { title: "PHẦN A: KIẾN THỨC LINH KIỆN iPHONE (15 điểm)", note: "Đáp án trong phần này rất giống nhau. Đọc kỹ từng chữ.", red: false },
-        B: { title: "PHẦN B: TƯ DUY LOGIC & QUY TRÌNH KHO (19 điểm)", note: "Đáp án trong phần này khác nhau ở 1-2 chữ về quy trình. Đọc kỹ.", red: false },
+        B: { title: "PHẦN B: TƯ DUY LOGIC & QUY TRÌNH KHO (22 điểm)", note: "Đáp án trong phần này khác nhau ở 1-2 chữ về quy trình. Đọc kỹ.", red: false },
         C: { title: "PHẦN C: TOÁN VÀ EXCEL CƠ BẢN (15 điểm)", note: "Phép tính phải làm cẩn thận — số liệu gần nhau, làm vội dễ nhầm.", red: false },
         D: { title: "PHẦN D: ĐẠO ĐỨC NGHỀ NGHIỆP (15 điểm)", note: "⚠ ĐIỂM SÀN PHẦN NÀY = 10/15. Dưới sàn = LOẠI dù tổng cao. Đọc kỹ TỪNG CHỮ về \"báo ai\" và \"khi nào báo\".", red: true },
-        E: { title: "PHẦN E: XỬ LÝ TÌNH HUỐNG PHỨC TẠP (26 điểm)", note: "Trả lời chi tiết các bước. Quan trọng là tư duy + thứ tự ưu tiên.", red: false },
+        E: { title: "PHẦN E: XỬ LÝ TÌNH HUỐNG PHỨC TẠP (28 điểm)", note: "Trả lời chi tiết các bước. Quan trọng là tư duy + thứ tự ưu tiên.", red: false },
         F: { title: "PHẦN F: TỰ ĐÁNH GIÁ & PHỎNG VẤN NGẮN (10 điểm)", note: "", red: false },
       };
       let currentPart = null;
@@ -1217,7 +1230,7 @@
     // ============================================================
     function computeAndShowResults() {
       const sectionScores = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
-      const sectionMax = { A: 15, B: 19, C: 15, D: 15, E: 26, F: 10 };
+      const sectionMax = { A: 15, B: 22, C: 15, D: 15, E: 28, F: 10 };
       const detail = [];
       const redFlags = [];
 
@@ -1300,14 +1313,14 @@
 
       const total = Object.values(sectionScores).reduce((a, b) => a + b, 0);
       const passD = sectionScores.D >= 10;
-      const passTotal = total >= 65;
+      const passTotal = total >= 68;
       const isPass = passD && passTotal;
 
       let tier, tierClass;
       if (!passD) { tier = "LOẠI — Phần D dưới sàn"; tierClass = "fail"; }
-      else if (!passTotal) { tier = "LOẠI — Tổng dưới 65"; tierClass = "fail"; }
-      else if (total >= 85) { tier = "TOP TIER — Đã có nền nghề"; tierClass = "top-tier"; }
-      else if (total >= 70) { tier = "TỐT — Cần training đầy đủ"; tierClass = "good"; }
+      else if (!passTotal) { tier = "LOẠI — Tổng dưới 68"; tierClass = "fail"; }
+      else if (total >= 89) { tier = "TOP TIER — Đã có nền nghề"; tierClass = "top-tier"; }
+      else if (total >= 74) { tier = "TỐT — Cần training đầy đủ"; tierClass = "good"; }
       else { tier = "ĐẠT SÀN — Cân nhắc thái độ"; tierClass = "pass"; }
 
       const recommendations = {
@@ -1321,7 +1334,7 @@
         `${document.getElementById('info-name').value || '(chưa nhập tên)'} — ${new Date().toLocaleString('vi-VN')}`;
       document.getElementById('resultScore').textContent = total + ' ';
       document.getElementById('resultScore').className = 'result-score ' + tierClass;
-      document.getElementById('resultScore').innerHTML = `${total}<span class="result-max"> / 100</span>`;
+      document.getElementById('resultScore').innerHTML = `${total}<span class="result-max"> / 105</span>`;
       document.getElementById('resultTier').textContent = tier;
       document.getElementById('resultTier').className = 'result-tier ' + tierClass;
       document.getElementById('resultRecommend').textContent = recommendations[tierClass];
